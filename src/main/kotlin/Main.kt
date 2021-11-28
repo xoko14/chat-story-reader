@@ -1,4 +1,6 @@
+import controller.PlaceholderReaderAndPrinter
+
 fun main(args: Array<String>) {
-    println("Hello World!")
-    println("Program arguments: ${args.joinToString()}")
+    val placeholder = PlaceholderReaderAndPrinter()
+    placeholder.run(args[0])
 }

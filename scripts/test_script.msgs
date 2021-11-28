@@ -1,0 +1,22 @@
+name=Proba 1
+author=xoko14
+version=1.0
+
+sender alexp=Alex Pérez
+sender maxg=Max García
+
+define chat alex-max1
+join=alexp maxg
+pov alexp
+
+define chat chat2
+join=alexp maxg
+pov maxg
+
+start chat alex-max1
+send alexp=hello
+send maxg=hi
+
+start chat chat2
+send alexp=Hi Max!
+send maxg=Hello Alex!
