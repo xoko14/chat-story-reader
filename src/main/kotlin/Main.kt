@@ -1,6 +1,11 @@
-import controller.PlaceholderReaderAndPrinter
+import controller.ScriptReader
 
 fun main(args: Array<String>) {
-    val placeholder = PlaceholderReaderAndPrinter()
-    placeholder.run(args[0])
+    val script = ScriptReader.read(args[0])
+    script.chats.forEach { chat ->
+        println("\nPOV: ${chat.pov.name}")
+        chat.messages.forEach { message ->
+            println("${message.sender.name}: ${message.message}")
+        }
+    }
 }
